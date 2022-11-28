@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="img/favcon.png" type="image/x-icon">
+    <title>Moonsoon</title>
+    <link rel="stylesheet" type="text/css" href="html/style.css">
+</head>
+<body>
+   <header>
+    <a href="index.html" target="_blank" class="logo">Logo</a>
+    <ul>
+        <li><a href="https://education.nationalgeographic.org/resource/monsoon" >Home</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Monsoon" >About</a></li>
+        <li><a href="html/Login.html" target="_blank">Login</a></li>
+        <li><a href="html/Contact.html" target="_blank">Contact</a></li>
+    </ul>
+</header>
+<section>
+    <img src="img/stars.png" id="stars">
+    <img src="img/moon.png" id="moon">
+    <img src="img/mountains_behind.png" id="mountains_behind">
+    <h2 id="text">Moon Light</h2>
+    <img src="img/mountains_front.png" id="mountains_front">
+</section> 
+<div class="sec" id="sec">
+<h2>Monsoon</h2>
+<p>A monsoon is a seasonal change in the direction of the prevailing, or strongest, winds of a region. Monsoons cause wet and dry seasons throughout much of the tropics. Monsoons are most often associated with the Indian Ocean.<br><br>Monsoons always blow from cold to warm regions. The summer monsoon and the winter monsoon determine the climate for most of India and Southeast Asia.<br><br>The summer monsoon is associated with heavy rainfall. It usually happens between April and September. As winter ends, warm, moist air from the southwest Indian Ocean blows toward countries like India, Sri Lanka, Bangladesh, and Myanmar. The summer monsoon brings a humid climate and torrential rainfall to these areas.</p>
+</div>
+<script>
+    let stars = document.getElementById('stars')
+    let moon = document.getElementById('moon')
+    let mountains_behind = document.getElementById('mountains_behind')
+    let text = document.getElementById('text')
+    let btn = document.getElementById('btn')
+    let mountains_fornt = document.getElementById('mountains_fornt')
+    let header = document.querySelector('header')
+
+    window.addEventListener('scroll', function (){
+       let value = window.scrolly;
+       stars.style.left = value * 0.25 + 'px';
+       moon.style.top = value * 1.05 + 'px';
+       mountains_behind.style.top = value * 0.05 + 'px';
+       mountains_fornt.style.top = value * 0 + 'px';
+       text.style.marginRight = value * 4 + 'px';
+       text.style.marginTop = value * 1.5 + 'px';
+       btn.style.marginTop = value * 1.5 + 'px';
+       header.style.top = value * 0.05 + 'px';
+    })
+</script>
+</body>
+</html>
